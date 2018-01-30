@@ -1,6 +1,6 @@
 {
   "name": "grid-sc",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Responsive React grid system built with styled-components",
   "main": "dist/index.js",
   "scripts": {
@@ -49,9 +49,11 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "styled-components": "3.1.4",
     "styled-system": "^1.0.2",
     "tag-hoc": "^1.0.0"
+  },
+  "peerDependencies": {
+    "styled-components": "3.x"
   },
   "ava": {
     "require": ["babel-register"],
