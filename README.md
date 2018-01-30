@@ -3,7 +3,7 @@
 ## Added support for styled-components 3.1.x
 
 ```sh
-npm i grid-styled-comps
+npm i grid-sc
 ```
 
 ## Original repo
