@@ -1,5 +1,12 @@
-
 # Grid Styled
+
+## Added support for styled-components 3.1.x
+
+```sh
+npm i grid-styled-comps
+```
+
+## Original repo
 
 Responsive React grid system built with [styled-components](https://github.com/styled-components/styled-components)
 
@@ -19,10 +26,10 @@ import { Flex, Box } from 'grid-styled'
 
 const App = () => (
   <Flex>
-    <Box width={1/2} px={2}>
+    <Box width={1 / 2} px={2}>
       Half width
     </Box>
-    <Box width={1/2} px={2}>
+    <Box width={1 / 2} px={2}>
       Half width
     </Box>
   </Flex>
@@ -111,7 +118,6 @@ import { Grid } from 'grid-styled'
 </div>
 ```
 
-
 ## `<Box />`
 
 The Box component handles width, margin and padding.
@@ -137,27 +143,27 @@ Use array values to set different margin or padding values per breakpoint for
 
 Margin and padding props follow a shorthand syntax for specifying direction.
 
-- `m`:  margin
-- `mt`: margin-top
-- `mr`: margin-right
-- `mb`: margin-bottom
-- `ml`: margin-left
-- `mx`: margin-left and margin-right
-- `my`: margin-top and margin-bottom
-- `p`:  padding
-- `pt`: padding-top
-- `pr`: padding-right
-- `pb`: padding-bottom
-- `pl`: padding-left
-- `px`: padding-left and padding-right
-- `py`: padding-top and padding-bottom
+* `m`: margin
+* `mt`: margin-top
+* `mr`: margin-right
+* `mb`: margin-bottom
+* `ml`: margin-left
+* `mx`: margin-left and margin-right
+* `my`: margin-top and margin-bottom
+* `p`: padding
+* `pt`: padding-top
+* `pr`: padding-right
+* `pb`: padding-bottom
+* `pl`: padding-left
+* `px`: padding-left and padding-right
+* `py`: padding-top and padding-bottom
 
 #### `flex` (string|array)
 
 Sets the `flex` property.
 
 ```jsx
-<Box flex='1 1 auto' />
+<Box flex="1 1 auto" />
 ```
 
 #### `order` (number|string|array)
@@ -173,7 +179,7 @@ Sets the `order` property.
 Sets the underlying HTML element.
 
 ```jsx
-<Box is='section' />
+<Box is="section" />
 ```
 
 ## `<Flex />`
@@ -181,18 +187,16 @@ Sets the underlying HTML element.
 The Flex component extends the Box component and sets display flex.
 It also includes the following props:
 
-- `align` (string|array) sets `align-items`
-- `justify` (string|array) sets `justify-content`
-- `direction` (string|array) sets `flex-direction`
-- `wrap` (boolean|array) sets `flex-wrap: wrap`
-- `column` (boolean) shortcut for `flex-direction: column`
-
+* `align` (string|array) sets `align-items`
+* `justify` (string|array) sets `justify-content`
+* `direction` (string|array) sets `flex-direction`
+* `wrap` (boolean|array) sets `flex-wrap: wrap`
+* `column` (boolean) shortcut for `flex-direction: column`
 
 ## `<Grid />`
 
 The Grid component extends the Box component and sets display inline-block
 for an alternative to flexbox layout.
-
 
 ## Responsive Styles
 
@@ -217,7 +221,6 @@ The Box component uses [styled-system](https://github.com/jxnblk/styled-system) 
 ## Extending Components
 
 Using styled-components, you can customize any of the grid-styled components' styles.
-
 
 ### InlineFlex
 
@@ -245,7 +248,6 @@ const Container = styled(Box)`
 `
 ```
 
-
 ### Auto Grid
 
 Components can also be extended with React.
@@ -256,20 +258,9 @@ This example creates components for a grid with set gutters where the columns ex
 import React from 'react'
 import { Flex, Box } from 'grid-styled'
 
-const Row = props => (
-  <Flex
-    {...props}
-    mx={-3}
-  />
-)
+const Row = props => <Flex {...props} mx={-3} />
 
-const Column = props => (
-  <Box
-    {...props}
-    px={3}
-    flex='1 1 auto'
-  />
-)
+const Column = props => <Box {...props} px={3} flex="1 1 auto" />
 ```
 
 ## Theming
@@ -284,9 +275,10 @@ import { ThemeProvider } from 'styled-components'
 const App = () => (
   <ThemeProvider
     theme={{
-      space: [ 0, 6, 12, 18, 24 ],
-      breakpoints: [ 32, 48, 64 ]
-    }}>
+      space: [0, 6, 12, 18, 24],
+      breakpoints: [32, 48, 64]
+    }}
+  >
     <div>
       <Grid>Grid with custom spacing scale and breakpoints</Grid>
     </div>
@@ -302,7 +294,6 @@ Breakpoints are hard-coded to the following min-widths: `40em`, `52em`, `64em`.
 
 To customize, provide an array of numbers that will be converted to ems.
 
-
 ### Spacing Scale
 
 Grid Styled components' margin and padding props use a 4 step spacing scale to help
@@ -313,8 +304,8 @@ which helps keep spacing consistent and elements aligned even when nesting compo
 
 ### Related
 
-- [Rebass](https://github.com/jxnblk/rebass)
-- [styled-system](https://github.com/jxnblk/styled-system)
-- [styled-components](https://github.com/styled-components/styled-components)
+* [Rebass](https://github.com/jxnblk/rebass)
+* [styled-system](https://github.com/jxnblk/styled-system)
+* [styled-components](https://github.com/styled-components/styled-components)
 
 [MIT License](LICENSE.md)

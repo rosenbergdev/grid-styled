@@ -1,6 +1,6 @@
 {
-  "name": "grid-styled",
-  "version": "2.0.0-11",
+  "name": "grid-styled-comps",
+  "version": "3.0.0",
   "description": "Responsive React grid system built with styled-components",
   "main": "dist/index.js",
   "scripts": {
@@ -54,9 +54,7 @@
     "tag-hoc": "^1.0.0"
   },
   "ava": {
-    "require": [
-      "babel-register"
-    ],
+    "require": ["babel-register"],
     "babel": "inherit"
   }
 }
